@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'echo $pwd'
+                sh 'echo "building...'
             }
         }
         stage('Test') {
             steps {
-                sh 'echo $pwd'
+                sh 'echo "testing..."'
             }
         }
                 
