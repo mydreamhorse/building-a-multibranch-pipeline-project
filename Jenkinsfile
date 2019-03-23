@@ -14,6 +14,21 @@ pipeline {
                 sh 'echo "testing..."'
             }
         }
-                
+        stage('Deliver for development') {
+            when {
+                branch 'development' 
+            }
+            steps {
+                sh 'echo Delivering...'
+            }
+        }
+        stage('Deploy for production') {
+            when {
+                branch 'production'  
+            }
+            steps {
+                sh 'echo Deploying...'
+            }
+        }   
     }
 }
