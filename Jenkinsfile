@@ -1,7 +1,4 @@
-pipeline {
-    agent {
-        any
-    }
+pipeline {    
     environment {
         CI = 'true'
     }
