@@ -10,7 +10,7 @@ node('linuxmint') {
     }
     stage('Test') {
         docker.image('node:6-alpine').withRun('-p 3000:3000 -p 5001:5000') {  
-            #sh './jenkins/scripts/test.sh'
+            //sh './jenkins/scripts/test.sh'
             echo 'testing...'
         }
     }
