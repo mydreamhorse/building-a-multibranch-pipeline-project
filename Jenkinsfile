@@ -1,18 +1,15 @@
-pipeline {
-    agent {
-        label 'linux'
-    }
+node('linuxmint') {
     environment {
         CI = 'true'
     }
     stages {
-        agent {
-            docker {
-                image 'node:6-alpine'
-                args '-p 3000:3000 -p 5001:5000'
-            }
-        }
         stage('Build') {
+            agent {
+                docker {
+                    image 'node:6-alpine'
+                    args '-p 3000:3000 -p 5001:5000'
+                }
+            }
             steps {
                 sh 'npm install'
             }
