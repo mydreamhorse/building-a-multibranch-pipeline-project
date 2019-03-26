@@ -1,4 +1,4 @@
-node('linuxmint') {
+node('docker') {
     environment {
         CI = 'true'
     }
